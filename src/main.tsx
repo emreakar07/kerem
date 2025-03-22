@@ -7,7 +7,6 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.scss'
 import {runSingleInstance} from "./utils/run-signle-instance";
-import './registerSW'
 
 eruda.init();
 
