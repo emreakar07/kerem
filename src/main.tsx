@@ -3,10 +3,11 @@ import './polyfills';
 import eruda from "eruda";
 
 import React, {StrictMode} from 'react'
-import {render} from 'react-dom';
+import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.scss'
 import {runSingleInstance} from "./utils/run-signle-instance";
+import './registerSW'
 
 eruda.init();
 
@@ -49,9 +50,8 @@ async function enableMocking() {
   });
 }
 
-enableMocking().then(() => render(
+enableMocking().then(() => ReactDOM.createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App/>
+    <App />
   </StrictMode>,
-  document.getElementById('root') as HTMLElement
 ));
