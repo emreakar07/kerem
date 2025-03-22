@@ -1,45 +1,66 @@
 .send-tx-form {
-  flex: 1;
-  display: flex;
+  background: #2a2a2a;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
-  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
 
   h3 {
-    color: white;
-    opacity: 0.8;
-    font-size: 28px;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    text-align: center;
   }
 
-  > div:nth-child(2) {
-    width: 100%;
+  .form-group {
+    margin-bottom: 1.5rem;
 
-    span {
-      word-break: break-word;
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+      font-size: 0.9rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #3a3a3a;
+      border-radius: 6px;
+      background: #1a1a1a;
+      color: #ffffff;
+      font-size: 1rem;
+
+      &:focus {
+        outline: none;
+        border-color: #0088cc;
+      }
+
+      &::placeholder {
+        color: #666;
+      }
     }
   }
 
-  > button {
-    border: none;
-    padding: 7px 15px;
-    border-radius: 15px;
-    cursor: pointer;
-
-    background-color: rgba(102,170,238,0.91);
+  button {
+    width: 100%;
+    padding: 1rem;
+    background: #0088cc;
     color: white;
-    font-size: 16px;
-    line-height: 20px;
-
-    transition: transform 0.1s ease-in-out;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
 
     &:hover {
-      transform: scale(1.03);
+      background: #006699;
     }
 
-    &:active {
-      transform: scale(0.97);
+    &:disabled {
+      background: #666;
+      cursor: not-allowed;
     }
   }
 }
